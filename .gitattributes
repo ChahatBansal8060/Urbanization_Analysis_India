@@ -1,0 +1,2 @@
+COMPASS_FINAL_VERSION/Raw_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
+URBANIZATION_WITHOUT_CHANGE_CLASSIFIER/Raw_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
