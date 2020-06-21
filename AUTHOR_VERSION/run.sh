@@ -1,4 +1,12 @@
 #!/bin/bash
+: '---------------------------------------------------------------------
+
+Copyright © 2020  Chahat Bansal
+
+All rights reserved
+
+----------------------------------------------------------------------
+'
 
 # Creating CBU/CNBU/Changing maps using change classifier
 python3 compressClasses_to_BU_NBU.py

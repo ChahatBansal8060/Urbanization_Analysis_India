@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import numpy as np
 import pandas as pd
 from pylab import *
@@ -39,8 +47,9 @@ def Remove_background_pixels(original_1D_image, smoothed_1D_image):
 '''
 Driver code starts here
 '''
+print("***** Performing Linear regression on each pixel value over 4 years *****\n")
 for district in districts:
-    print (district)
+    print("Processing",district)
     year_to_pixel_matrix = [] # this matrix stores for each year the value of all pixels 
     
     for year in years:
@@ -100,7 +109,7 @@ for district in districts:
                 current_pixel += 1
                 
     cost_array = np.array(cost_array)
-    print(cost_array)
+    # print(cost_array)
 
     # Save the cost array
     os.makedirs('Cost_results_from_Regression/'+district, exist_ok = True)

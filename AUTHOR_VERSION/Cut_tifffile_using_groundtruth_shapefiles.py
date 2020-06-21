@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import json
 import rasterio
 from rasterio.mask import mask
@@ -6,13 +14,14 @@ import os
 from os import listdir
 import kml2geojson
 
+print("******** Cutting Predicted Tiffiles into smaller shapes according to groundtruth***********")
 '''
 The ground truth is manually created for 4 districts for the year 2018
 '''
 districts = ['Bangalore', 'Chennai', 'Delhi', 'Mumbai']
 
 for district in districts:
-    print(district)
+    # print(district)
     
     folder_containing_tifffiles = "CBU_CNBU_Changing_Maps/tifs"
     tiff_file_name = district+'_CBU_CNBU_Changing.tif'
@@ -48,7 +57,7 @@ for district in districts:
                 except:
                     continue
                            
-print('done')    
+print('done\n')    
 
 
 

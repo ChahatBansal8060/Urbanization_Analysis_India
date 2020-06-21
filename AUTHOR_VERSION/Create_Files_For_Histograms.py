@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import numpy as np
 import pandas as pd 
 from PIL import Image
@@ -13,13 +21,13 @@ Output:
 1) District_results_df = The dataframe with each pixel-type density reported against the district name 
 '''
 def Find_percentage_U_PU_R_pixels(districts, year):
-    print("**********************Finding Density of Urban/Rural/Periurban Pixels**********************")
+    # print("**********************Finding Density of Urban/Rural/Periurban Pixels**********************")
     Urban_percent_list = []
     Periurban_percent_list = []
     Rural_percent_list = []
 
     for district in districts:
-        print('Processing ',district,' in year ',year)
+        # print('Processing ',district,' in year ',year)
         U_PU_R_imagepath = 'Visualization_Results/U_PU_R_maps/'+district+'/'+district+'_U_PU_R_colored_prediction_'+year+'.png'
         U_PU_R_map = np.array( Image.open(U_PU_R_imagepath).convert("RGB") )
         
@@ -55,13 +63,13 @@ Outputs:
 1) result_dataframe = It stores the percent density of each class against each district for a particular year 
 '''
 def Find_percentage_grid_classes(districts, year):
-    print(year,": ******************* Finding density of C1-C5 urban grids**********************")
+    # print(year,": ******************* Finding density of C1-C5 urban grids**********************")
     result_dataframe = pd.DataFrame()
     result_dataframe['District_name'] = districts
     
     class_label_list = [1,2,3,4,5]
     for class_label in class_label_list:
-        print('Processing class label-',class_label)
+        # print('Processing class label-',class_label)
         density_list = []
         for district in districts:
             all_indicator_df = pd.read_csv("Grid_wise_all_indicators/"+district+"/"+district+"_"+str(year)+"_all_indicators.csv")
@@ -99,9 +107,6 @@ def Get_Class_Transition_Matrix(districts):
             grid_classes_2016[i] = missing_label_in_2016[i] 
 
         df_confusion = pd.crosstab(grid_classes_2016, grid_classes_2019)
-        #df_confusion = df_confusion / df_confusion.sum(axis=1)[:,None]
-        #df_confusion = df_confusion * 100.0
-        #df_confusion = np.round(df_confusion,2)
         print(df_confusion,"\n\n")
         
 
@@ -111,7 +116,7 @@ Input:
 1) districts = list of all districts
 '''
 def Compute_Rural_To_Urban_Grids(districts):
-    print("**********************Finding Number of Rural--->Urbanized Pixels**********************")    
+    # print("**********************Finding Number of Rural--->Urbanized Pixels**********************")    
     for district in districts:
         print('Processing ',district)
         imagepath_2016 = 'Visualization_Results/U_PU_R_maps/'+district+'/'+district+'_U_PU_R_colored_prediction_2016.png'
@@ -161,7 +166,7 @@ def Get_Increased_Grid_Class_Density(districts):
 
     class_labels = [1, 2, 3, 4, 5]
     for class_label in class_labels:
-        print('Processing Class',class_label)
+        # print('Processing Class',class_label)
         current_densities = []
         for district in districts:
             all_indicator_df_2016 = pd.read_csv("Grid_wise_all_indicators/"+district+"/"+district+"_2016_all_indicators.csv")
@@ -196,6 +201,7 @@ def Get_Increased_Grid_Class_Density(districts):
 '''
 Driver code begins here
 '''
+print("\n*************** Creating Datafiles For Creating Histograms ***********\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 years = ['2016', '2019']
 
@@ -203,9 +209,11 @@ final_result_folder = "Visualization_Results/Files_for_histograms"
 os.makedirs(final_result_folder, exist_ok=True)
 
 # Print the increase in the count of selected grids from 2016->2019
+print("***Print the increase in the count of selected grids from 2016->2019\n")
 Get_New_Selected_Grids(districts)
 
 # Calculating density of urban/periurban/rural pixels
+print("***Calculating density of urban/periurban/rural pixels\n")
 U_PU_R_df = pd.DataFrame()
 for year in years:
    curr_dataframe = Find_percentage_U_PU_R_pixels(districts, year)
@@ -214,11 +222,14 @@ for year in years:
    else:
        U_PU_R_df = pd.merge(U_PU_R_df, curr_dataframe, left_on='District_name', right_on='District_name', how='inner')
 U_PU_R_df.to_csv(final_result_folder+"/District_level_urban_densities.csv", index=False)
+print("Check output directory for the results\n")
 
 # Check what size of rural area converted to urban/periurban
+print("***Calculating the number of pixels converting from rural --> urban/periurban from 2016-19\n")
 Compute_Rural_To_Urban_Grids(districts)
 
 # Calculating density of C1-C5 grids 
+print("***Calculating the density of C1-C5 grids\n")
 grid_class_df = pd.DataFrame()
 for year in years:
    curr_dataframe = Find_percentage_grid_classes(districts, year)
@@ -227,12 +238,15 @@ for year in years:
    else:
        grid_class_df = pd.merge(grid_class_df, curr_dataframe, left_on='District_name', right_on='District_name', how='inner')
 grid_class_df.to_csv(final_result_folder+"/District_level_grid_class_densities.csv", index=False)
+print("Check output directory for the results\n")
 
 # Computing transition matrices of C1->C5 grids
+print("***Computing the transition matrix of C1-C5 grids from 2016 to 2019\n")
 Get_Class_Transition_Matrix(districts)
 
 # Find the increase in the density of C1-C5 classes from 2016->2019
+print("***Computing Increase in Density of C1-C5 grids from 2016 to 2019\n")
 result_dataframe = Get_Increased_Grid_Class_Density(districts)
 result_dataframe.to_csv(final_result_folder+"/Increase_In_Class_Density.csv",index=False)
-
+print("Check output directory for the results\n")
 

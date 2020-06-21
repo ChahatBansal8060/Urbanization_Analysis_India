@@ -1,3 +1,12 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
+
 import numpy as np
 from scipy import ndimage
 import numpy as np
@@ -8,6 +17,7 @@ import os, sys
 '''
 Driver code starts here
 '''
+print("********* Executing Change Classifier *********\n")
 districts = ['Bangalore', 'Chennai', 'Delhi', 'Gurgaon', 'Hyderabad', 'Kolkata', 'Mumbai']
 years = ['2016', '2017', '2018', '2019']
 for district in districts:
@@ -19,7 +29,7 @@ for district in districts:
     cost_array = cost_array/1000  
     
     threshold = 1.95
-    print('threshold for ',district,' is: ',threshold)
+    print('Threshold : ',threshold)
     
     district_image_base_year = np.array(Image.open('BU_NBU_maps/'+district+'/'+district+'_BU_NBU_'+years[0]+'.png'))
     # bring images to label 0 for background pixels, 1 for BU, and 2 for NBU
@@ -70,5 +80,5 @@ for district in districts:
     print("Percentage of CBU pixels: ", (CBU_pixel_count*100)/total_pixels,'%')
     print("Percentage of CNBU pixels: ", (CNBU_pixel_count*100)/total_pixels,'%')
     print("Percentage of Changing pixels: ", (Changing_pixel_count*100)/total_pixels,'%')
-    
+    print("\n")
 

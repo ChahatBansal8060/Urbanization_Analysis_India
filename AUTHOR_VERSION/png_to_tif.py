@@ -1,8 +1,15 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 from osgeo import gdal
 import gdal, ogr, os, osr
 import numpy as np
 import sys
-#import imageio
 import numpy as np
 from PIL import Image
 
@@ -40,6 +47,7 @@ def array2raster(reference_tif_image_path, out_image_path, input_png_image_path)
 This function holds the driver code
 '''
 def main():
+    print("***** Converting png prediction maps to tiff files *****\n")
     # districts for which ground truth is available
     districts = ['Bangalore', 'Chennai', 'Delhi', 'Gurgaon', 'Hyderabad', 'Kolkata', 'Mumbai']
     png_images_directory = "CBU_CNBU_Changing_Maps"
@@ -48,7 +56,7 @@ def main():
     os.makedirs(output_directory, exist_ok=True)
 
     for district in districts:
-        print(district)    
+        print("Processing ",district)    
         png_image_filepath = png_images_directory +'/'+district+"_CBU_CNBU_Changing.png"
         reference_tif_image_path = 'Reference_district_tiffiles/'+district+'.tif'
         
@@ -59,9 +67,9 @@ def main():
         # Validating the output tiff file
         tiffImage = np.asarray( Image.open(out_image_path) )
         input_image = np.asarray( Image.open(png_image_filepath) )
-        print("The unique labels in tiff image are: ", np.unique(tiffImage) )
-        print("The unique labels in png image are: ", np.unique(input_image) )
-        print("The shape of tiff image is: ", tiffImage.shape )
+        # print("The unique labels in tiff image are: ", np.unique(tiffImage) )
+        # print("The unique labels in png image are: ", np.unique(input_image) )
+        # print("The shape of tiff image is: ", tiffImage.shape )
 
 
 if __name__ == '__main__':

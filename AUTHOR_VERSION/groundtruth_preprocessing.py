@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import sys,os
 from os import listdir
 from os.path import isfile, join
@@ -103,6 +111,7 @@ def crop_images(input_folder, output_folder, crop_size):
 Driver code begins here
 '''
 def main():
+    print("***** Preprocessing the groundtruth to make it balanced *****\n")
     #districts for which groundtruth is present
     districts = ['Bangalore', 'Chennai', 'Delhi', 'Mumbai']
     categories = ['CBU', 'CNBU', 'Changing']
@@ -111,15 +120,15 @@ def main():
     output_groundtruth_directory = 'Balanced_Trimmed_tiffiles'
 
     for district in districts:
-        print("************ Analyzing ",district,' ************')
+        print("Analyzing ",district)
         per_category_image_stats = {} #dictionary to store the statistics corresponding to each category of labels
         for category in categories:
             cropped_tiffiles_directory = input_groundtruth_directory+'/'+district+'/'+district+'_'+category
             per_category_image_stats[category] = image_statistics(cropped_tiffiles_directory)
         
         crop_size, min_category = crop_dimensions(per_category_image_stats)
-        print("Crop size is: ", crop_size)
-        print("Minimum category is: ", min_category)
+        # print("Crop size is: ", crop_size)
+        # print("Minimum category is: ", min_category)
 
         #copy the minimum category as it is in the balanced folder
         input_tiffiles_directory = input_groundtruth_directory+'/'+district+'/'+district+'_'+min_category

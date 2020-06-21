@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 from lxml import etree as ET
 from copy import deepcopy
 import os, sys
@@ -411,10 +419,11 @@ def Get_walkability_ratio(curr_lat, curr_lon, grid_size, min_lat, max_lat, min_l
 '''
 Driver code starts here
 '''
+print("***** Calculating Grid-level Road-based Indicators ******\n")
 districts = ['Chennai', 'Bangalore', 'Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 
 for district in districts:
-    print(district)
+    # print(district)
 
     input_directory = 'Processed_OSM_data'
     processed_OSM_datafile = 'processed_'+district+'.osm'
@@ -444,7 +453,7 @@ for district in districts:
             grid_road_length = Get_road_length(curr_lat, curr_long, 0.01, node_information_map, grid_adjacency_list_full_edges, grid_adjacency_list_half_edges)
             grid_road_length = round(grid_road_length, 4)
             walkability_ratio = Get_walkability_ratio(curr_lat, curr_long, 0.01, min_lat, max_lat, min_lon, max_lon, node_information_map, adjacency_list, grid_adjacency_list_full_edges)
-            print("Grid ",grid_number,"- \t 3-ways: ",three_ways,"\t 4-ways: ",four_ways,"\t Road Length: ",grid_road_length,"\t walkability ratio: ", walkability_ratio)
+            # print("Grid ",grid_number,"- \t 3-ways: ",three_ways,"\t 4-ways: ",four_ways,"\t Road Length: ",grid_road_length,"\t walkability ratio: ", walkability_ratio)
                 
             result_grid_numbers.append(grid_number)
             result_grid_coordinates.append([curr_lat, curr_long])
@@ -464,8 +473,9 @@ for district in districts:
     Results_dataframe = pd.DataFrame(Zipped_results, columns = ['Grid_number', 'Grid_coordinates', 'Three_ways', 'Four_ways', 'Road_length', 'Walkability_ratio'])
 
     Results_dataframe.to_csv(results_directory+'/'+result_filename, index=False)
+    print("Road indicators calculated successfully for ",district)
 
-print("Execution Complete!")
+print("Execution Complete!\n")
 
 
 

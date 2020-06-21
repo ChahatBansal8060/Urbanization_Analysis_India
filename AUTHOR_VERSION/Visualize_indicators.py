@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import numpy as np
 import pandas as pd
 from IPython.display import display
@@ -154,11 +162,12 @@ def Plot_grid_types(district, sample_image, min_lat, max_lat, min_lon, max_lon, 
 '''
 Driver code begins here for the year 2019
 '''
+print("***** Creating Visualizations of Different Indicators *****\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 years = ['2016', '2019']
 
 for district in districts:
-    print(district)
+    print("Processing", district)
     min_lat, max_lat, min_lon, max_lon = Get_district_bounding_box( 'district_coordinates.csv', district )
 
     # Since the grid size (0.01) is of precision 2, round off the image bounding box to fit all the grids
@@ -179,3 +188,5 @@ for district in districts:
         # plot the graph of grid types- urban. periurban, and rural
         Plot_grid_types(district, padded_image, rounded_min_lat, rounded_max_lat, rounded_min_lon, rounded_max_lon, indicators_dataframe, year)
     
+print("Execution complete\n")
+

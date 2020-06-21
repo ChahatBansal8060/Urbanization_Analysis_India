@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import os, sys
 from PIL import Image
 import numpy as np
@@ -58,6 +66,7 @@ def Get_district_wise_accuracy(districts, tiffiles_folder, pixelType_dict):
 '''
 Driver code begins here
 '''
+print("\n************ Checking the Accuracy of CBU/CNBU/Changing Maps **************\n")
 # list of districts for which the accuracy is to be calculated as its groundtruth is available
 districts = ['Bangalore', 'Chennai', 'Delhi', 'Mumbai']
 

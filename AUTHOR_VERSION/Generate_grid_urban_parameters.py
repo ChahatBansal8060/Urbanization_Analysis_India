@@ -1,3 +1,11 @@
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 from PIL import Image
 import numpy as np
 import pandas as pd
@@ -137,6 +145,7 @@ def Compute_single_year_urban_extent(BU_NBU_map, min_lat, max_lat, min_lon, max_
                 Urban_Periurban_Rural_map[row_id][col_id] = 3 #pixel is rural
                 
     return Urban_Periurban_Rural_map
+
 
 '''
 This function re-labels each pixel as rural, peri-urban or urban based on spatial correctness.
@@ -315,11 +324,12 @@ def Plot_U_PU_R_map(district, U_PU_R_mapping, year, target_filepath):
 '''
 Driver code begins here
 '''
+print("***** Calculating Urban Indicators at both Pixel and Grid-level ******\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 #districts = ['Chennai']
 
 for district in districts:
-    print(district)
+    # print(district)
 
     CBU_CNBU_Chaning_map_filepath = 'CBU_CNBU_Changing_Maps/'+district+'_CBU_CNBU_Changing.png'
     CBU_CNBU_Changing_map = np.array( Image.open(CBU_CNBU_Chaning_map_filepath) )

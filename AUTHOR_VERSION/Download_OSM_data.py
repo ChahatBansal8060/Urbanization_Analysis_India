@@ -1,4 +1,11 @@
-#THE SCRIPT for automating the OSM data download for districts
+# ---------------------------------------------------------------------
+
+# Copyright © 2020  Chahat Bansal
+
+# All rights reserved
+
+# ----------------------------------------------------------------------
+
 import requests
 import time
 import pandas as pd
@@ -6,6 +13,7 @@ import overpy
 import os
 from math import floor, ceil
 
+print("****** Automated Downloading of OSM data ******\n")
 '''
 Driver code starts here
 '''
