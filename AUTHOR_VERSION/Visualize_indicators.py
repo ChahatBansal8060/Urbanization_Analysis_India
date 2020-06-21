@@ -159,6 +159,30 @@ def Plot_grid_types(district, sample_image, min_lat, max_lat, min_lon, max_lon, 
     print('Done plotting grid-types for ',district,' ',year)
 
 
+def Plot_CBU_CNBU_Changing_Colored_Maps(district, input_image, output_image_path):
+    # designate RGB color to each pixel class    
+    background_color = [0,0,0] #black
+    cnbu_color = [255,255,255] #white
+    cbu_color = [255, 140, 0] # Dark orange
+    changing_color = [150, 40, 27] # Maroon
+    
+    final_image = np.zeros([sample_image.shape[0], sample_image.shape[1], 3], dtype=np.uint8)
+    
+    for i in range(final_image.shape[0]):
+        for j in range(final_image.shape[1]):
+            if sample_image[i][j] == 0: # if this pixel is a background pixel
+                final_image[i][j] = background_color
+            elif sample_image[i][j] == 65: # if this pixel is CBU pixel
+                final_image[i][j] = cbu_color
+            elif sample_image[i][j] == 130: # if this pixel is CNBU pixel
+                final_image[i][j] = cnbu_color
+            elif sample_image[i][j] == 195: # if this pixel is Changing pixel
+                final_image[i][j] = changing_color
+                
+    final_image = Image.fromarray(final_image)
+    final_image.save(output_image_path)
+
+
 '''
 Driver code begins here for the year 2019
 '''
@@ -188,5 +212,15 @@ for district in districts:
         # plot the graph of grid types- urban. periurban, and rural
         Plot_grid_types(district, padded_image, rounded_min_lat, rounded_max_lat, rounded_min_lon, rounded_max_lon, indicators_dataframe, year)
     
+    #Plotting colored images of CBU_CNBU_Changing maps
+    # CBU_CNBU_Changing_image_input_path = "CBU_CNBU_Changing_Maps/"+district+"_CBU_CNBU_Changing.png"
+    CBU_CNBU_Changing_Colored_folder = "Visualization_Results/CBU_CNBU_Changing_Colored_Maps"
+    os.makedirs(CBU_CNBU_Changing_Colored_folder, exist_ok=True)
+    CBU_CNBU_Changing_image_output_path = CBU_CNBU_Changing_Colored_folder+"/"+district+"_CBU_CNBU_Changing_Colored.png"
+    
+    print('Plotting Colored CBU/CNBU/Changing map for ',district)
+    Plot_CBU_CNBU_Changing_Colored_Maps(district, padded_image, CBU_CNBU_Changing_image_output_path)
+    print('Done!')
+
 print("Execution complete\n")
 
