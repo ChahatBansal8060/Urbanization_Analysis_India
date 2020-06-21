@@ -3,10 +3,6 @@
 ## Project Overview
 With growing urbanization, being able to track urban change is important to plan cities better. Land-use classification of satellite data has been actively used for this purpose. We augment this analysis through the use of crowd-sourced data about the road network in cities, obtained through the Open Street Maps platform. We develop several indicators to quantify the spatial layout of cities and how different localities have changed over time. We apply our methods to study seven Indian cities (Bangalore, Chennai, Delhi, Gurgaon, Hyderabad, Kolkata, and Mumbai). Our contribution lies in synthesizing two freely available datasets of satellite imagery and road information to develop a series of standardized indicators for different aspects of urbanization, which can serve to compare various cities with one another and to track change happening in the cities over time.
 
-## Published Papers
-* **COMPASS_2020_Camera_Ready.pdf-** This is the main paper with overleaf source files in **COMPASS_2020_Camera_Ready.zip**
-* **COMPASS_2020_Supplementary_Document.pdf-** This is the supplementary material to be read with the main paper, with overleaf source files in **COMPASS_2020_Supplementary_Document.zip**
-
 ## Execution
 To implement the project, execute the **run.sh**.
 
