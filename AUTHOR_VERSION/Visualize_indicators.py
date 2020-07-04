@@ -108,7 +108,7 @@ def Plot_grid_classes(district, sample_image, min_lat, max_lat, min_lon, max_lon
     target_directory = 'Visualization_Results/Class_wise_grid_maps/'+district
     os.makedirs(target_directory, exist_ok = True)
     final_image.save(target_directory+'/'+district+'_grid_classes_'+year+'.png')
-    print('Done plotting grid-classes for ',district,' ',year)
+    #print('Done plotting grid-classes for ',district,' ',year)
  
 
 '''
@@ -156,7 +156,7 @@ def Plot_grid_types(district, sample_image, min_lat, max_lat, min_lon, max_lon, 
     target_directory = 'Visualization_Results/Grid_type_maps/'+district
     os.makedirs(target_directory, exist_ok = True)
     final_image.save(target_directory+'/'+district+'_grid_types_'+year+'.png')
-    print('Done plotting grid-types for ',district,' ',year)
+    #print('Done plotting grid-types for ',district,' ',year)
 
 
 def Plot_CBU_CNBU_Changing_Colored_Maps(district, input_image, output_image_path):
@@ -186,7 +186,7 @@ def Plot_CBU_CNBU_Changing_Colored_Maps(district, input_image, output_image_path
 '''
 Driver code begins here for the year 2019
 '''
-print("***** Creating Visualizations of Different Indicators *****\n")
+#print("***** Creating Visualizations of Different Indicators *****\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 years = ['2016', '2019']
 
@@ -218,9 +218,12 @@ for district in districts:
     os.makedirs(CBU_CNBU_Changing_Colored_folder, exist_ok=True)
     CBU_CNBU_Changing_image_output_path = CBU_CNBU_Changing_Colored_folder+"/"+district+"_CBU_CNBU_Changing_Colored.png"
     
-    print('Plotting Colored CBU/CNBU/Changing map for ',district)
+    #print('Plotting Colored CBU/CNBU/Changing map for ',district)
     Plot_CBU_CNBU_Changing_Colored_Maps(district, padded_image, CBU_CNBU_Changing_image_output_path)
-    print('Done!')
+    #print('Done!')
 
-print("Execution complete\n")
+print("\n#### Check ",CBU_CNBU_Changing_Colored_folder,", Visualization_Results/Grid_type_maps, and Visualization_Results/Class_wise_grid_maps for resultant images!! ####\n")
+
+
+
 

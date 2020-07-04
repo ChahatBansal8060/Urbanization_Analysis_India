@@ -10,7 +10,7 @@ from lxml import etree as ET
 from copy import deepcopy
 import os, sys
 
-print("**** Extracting road information from Raw OSM Data *****\n")
+#print("**** Extracting road information from Raw OSM Data *****\n")
 '''
 The code is automated for all districts, but it is preferred to execute this code for one district at a time.
 The large XML files take up the RAM memory. Execute the script one district at a time.
@@ -65,7 +65,9 @@ for district in districts:
     clean_osm_data_file.write("</osm>")
     clean_osm_data_file.close()
 
-    print("Done for ",district)
+    print("Road information successfully extracted for ",district)
+
+print("\n#### Check ",target_directory," for the resultant XML Files ####\n")
 
 
 

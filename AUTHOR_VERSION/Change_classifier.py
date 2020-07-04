@@ -1,35 +1,29 @@
-# ---------------------------------------------------------------------
-
-# Copyright © 2020  Chahat Bansal
-
-# All rights reserved
-
-# ----------------------------------------------------------------------
-
-
 import numpy as np
 from scipy import ndimage
+import matplotlib.pyplot as plt
+from scipy.interpolate import UnivariateSpline
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 import os, sys
 
-    
+
 '''
 Driver code starts here
 '''
-print("********* Executing Change Classifier *********\n")
 districts = ['Bangalore', 'Chennai', 'Delhi', 'Gurgaon', 'Hyderabad', 'Kolkata', 'Mumbai']
 years = ['2016', '2017', '2018', '2019']
 for district in districts:
-    print(district)
+    #print(district)
     main_folder = 'Cost_results_from_Regression/'+district
     cost_array = np.loadtxt(main_folder+'/'+district+'_regression_cost_array.txt')
     
     #divide cost array by 1000 because we multiplied 1000 during storage of file
     cost_array = cost_array/1000  
     
-    threshold = 1.95
-    print('Threshold : ',threshold)
+    threshold = float(sys.argv[1]) #2.0
+    #print('threshold for ',district,' is: ',threshold)
     
     district_image_base_year = np.array(Image.open('BU_NBU_maps/'+district+'/'+district+'_BU_NBU_'+years[0]+'.png'))
     # bring images to label 0 for background pixels, 1 for BU, and 2 for NBU
@@ -76,9 +70,13 @@ for district in districts:
     CBU_CNBU_Changing_map = ( Image.fromarray(CBU_CNBU_Changing_map) ).convert("L")
     CBU_CNBU_Changing_map.save('CBU_CNBU_Changing_Maps/'+district+'_CBU_CNBU_Changing.png')
 
-    total_pixels = CBU_pixel_count + CNBU_pixel_count + Changing_pixel_count
-    print("Percentage of CBU pixels: ", (CBU_pixel_count*100)/total_pixels,'%')
-    print("Percentage of CNBU pixels: ", (CNBU_pixel_count*100)/total_pixels,'%')
-    print("Percentage of Changing pixels: ", (Changing_pixel_count*100)/total_pixels,'%')
-    print("\n")
+    #total_pixels = CBU_pixel_count + CNBU_pixel_count + Changing_pixel_count
+    #print("Percentage of CBU pixels: ", (CBU_pixel_count*100)/total_pixels,'%')
+    #print("Percentage of CNBU pixels: ", (CNBU_pixel_count*100)/total_pixels,'%')
+    #print("Percentage of Changing pixels: ", (Changing_pixel_count*100)/total_pixels,'%')
+    print("Change classifier successfully executed for ",district)
 
+print("\n#### Check CBU_CNBU_Changing_Maps directory for the results. CBU (value 65), CNBU (value 130), and Changing (value 195) ####\n")
+
+
+    

@@ -1,17 +1,7 @@
-# ---------------------------------------------------------------------
-
-# Copyright © 2020  Chahat Bansal
-
-# All rights reserved
-
-# ----------------------------------------------------------------------
-
 from PIL import Image
 import numpy as np
 import pandas as pd
 import os, sys
-
-print("\n ************* Compressing Land-cover Classes to BU/NBU Category **************\n")
 
 # define color coding used in prediction images
 Background = 0
@@ -19,6 +9,7 @@ Green = 1
 Water = 2
 Builtup = 3
 Barrenland = 4
+
 
 districts=['Bangalore', 'Chennai', 'Delhi', 'Gurgaon', 'Hyderabad', 'Kolkata', 'Mumbai']
 years = ['2016', '2017', '2018', '2019']
@@ -42,6 +33,8 @@ for district in districts:
 
         image = ( Image.fromarray(image) ).convert("L")
         image.save(destination_directory+'/'+district+'/'+district+'_BU_NBU_'+year+'.png')
+    print("BU/NBU Map created for ",district)
+    
+print("\n#### Check ",destination_directory," directory for results ####\n")
 
-print("Conversion Successful !!")
 

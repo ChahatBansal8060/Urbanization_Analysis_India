@@ -13,7 +13,7 @@ import overpy
 import os
 from math import floor, ceil
 
-print("****** Automated Downloading of OSM data ******\n")
+#print("****** Automated Downloading of OSM data ******\n")
 '''
 Driver code starts here
 '''
@@ -49,9 +49,13 @@ for i in range(len(districts)):
     file_object = open(output_file_path)
     osm_text = file_object.read().strip().split()
     if '</osm>' in osm_text:
-        print("Complete OSM data downloaded for district: ",districts[i])
+        print("Complete OSM data downloaded for ",districts[i])
     else:
-        print("Incomplete OSM data downloaded for district: ",districts[i])
+        print("OOPS, TRY AGAIN! Incomplete OSM data downloaded for ",districts[i],"\n")
+
+print("\n#### Check ",output_directory," for the downloaded files ####\n")
+
+
 
 
 

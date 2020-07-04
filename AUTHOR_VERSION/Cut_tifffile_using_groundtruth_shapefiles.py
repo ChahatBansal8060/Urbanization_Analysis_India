@@ -13,12 +13,18 @@ from json import loads
 import os
 from os import listdir
 import kml2geojson
+import shutil
 
-print("******** Cutting Predicted Tiffiles into smaller shapes according to groundtruth***********")
+#print("******** Cutting Predicted Tiffiles into smaller shapes according to groundtruth***********")
 '''
 The ground truth is manually created for 4 districts for the year 2018
 '''
-districts = ['Bangalore', 'Chennai', 'Delhi', 'Mumbai']
+districts = ['Bangalore', 'Chennai', 'Delhi', 'Gurgaon', 'Hyderabad', 'Mumbai']
+
+# Delete old results if any 
+if os.path.exists('Trimmed_tiffiles') and os.path.isdir('Trimmed_tiffiles'):
+    shutil.rmtree('Trimmed_tiffiles')
+
 
 for district in districts:
     # print(district)
@@ -56,8 +62,9 @@ for district in districts:
                             dest.write(out_image)
                 except:
                     continue
+    print("The Tiffiles of ",district," have been cut wrt its groundtruth shapefiles")
                            
-print('done\n')    
+print('\n#### Check Trimmed_tiffiles directory for output results ####\n')    
 
 
 

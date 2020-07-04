@@ -21,7 +21,6 @@ Output:
 1) District_results_df = The dataframe with each pixel-type density reported against the district name 
 '''
 def Find_percentage_U_PU_R_pixels(districts, year):
-    # print("**********************Finding Density of Urban/Rural/Periurban Pixels**********************")
     Urban_percent_list = []
     Periurban_percent_list = []
     Rural_percent_list = []
@@ -116,7 +115,6 @@ Input:
 1) districts = list of all districts
 '''
 def Compute_Rural_To_Urban_Grids(districts):
-    # print("**********************Finding Number of Rural--->Urbanized Pixels**********************")    
     for district in districts:
         print('Processing ',district)
         imagepath_2016 = 'Visualization_Results/U_PU_R_maps/'+district+'/'+district+'_U_PU_R_colored_prediction_2016.png'
@@ -149,8 +147,8 @@ def Get_New_Selected_Grids(districts):
         grid_classes_2016 = grid_classes_2016[ grid_classes_2016 != 0 ]
         grid_classes_2019 = grid_classes_2019[ grid_classes_2019 != 0 ]
 
-        print("Selected grids in 2016: ", len(grid_classes_2016))
-        print("Selected grids in 2019: ", len(grid_classes_2019))
+        #print("Selected grids in 2016: ", len(grid_classes_2016))
+        #print("Selected grids in 2019: ", len(grid_classes_2019))
 
         increase_count = (len(grid_classes_2019) - len(grid_classes_2016)) / len(grid_classes_2016)
         print("Increase in density of selected grids from 2016 to 2019: ", increase_count) 
@@ -201,7 +199,7 @@ def Get_Increased_Grid_Class_Density(districts):
 '''
 Driver code begins here
 '''
-print("\n*************** Creating Datafiles For Creating Histograms ***********\n")
+#print("\n*************** Creating Datafiles For Creating Histograms ***********\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 years = ['2016', '2019']
 
@@ -209,11 +207,11 @@ final_result_folder = "Visualization_Results/Files_for_histograms"
 os.makedirs(final_result_folder, exist_ok=True)
 
 # Print the increase in the count of selected grids from 2016->2019
-print("***Print the increase in the count of selected grids from 2016->2019\n")
+print("\n***** Increase in the count of selected grids from 2016->2019 *****\n")
 Get_New_Selected_Grids(districts)
 
 # Calculating density of urban/periurban/rural pixels
-print("***Calculating density of urban/periurban/rural pixels\n")
+print("\n***** Calculating density of urban/periurban/rural pixels *****\n")
 U_PU_R_df = pd.DataFrame()
 for year in years:
    curr_dataframe = Find_percentage_U_PU_R_pixels(districts, year)
@@ -222,14 +220,14 @@ for year in years:
    else:
        U_PU_R_df = pd.merge(U_PU_R_df, curr_dataframe, left_on='District_name', right_on='District_name', how='inner')
 U_PU_R_df.to_csv(final_result_folder+"/District_level_urban_densities.csv", index=False)
-print("Check output directory for the results\n")
+#print("Check output directory for the results\n")
 
 # Check what size of rural area converted to urban/periurban
-print("***Calculating the number of pixels converting from rural --> urban/periurban from 2016-19\n")
+print("\n***** Calculating the number of pixels converting from rural --> urban/periurban from 2016-19 *****\n")
 Compute_Rural_To_Urban_Grids(districts)
 
 # Calculating density of C1-C5 grids 
-print("***Calculating the density of C1-C5 grids\n")
+print("\n***** Calculating the density of C1-C5 grids *****\n")
 grid_class_df = pd.DataFrame()
 for year in years:
    curr_dataframe = Find_percentage_grid_classes(districts, year)
@@ -238,15 +236,18 @@ for year in years:
    else:
        grid_class_df = pd.merge(grid_class_df, curr_dataframe, left_on='District_name', right_on='District_name', how='inner')
 grid_class_df.to_csv(final_result_folder+"/District_level_grid_class_densities.csv", index=False)
-print("Check output directory for the results\n")
+#print("Check output directory for the results\n")
 
 # Computing transition matrices of C1->C5 grids
-print("***Computing the transition matrix of C1-C5 grids from 2016 to 2019\n")
+print("\n***** Computing the transition matrix of C1-C5 grids from 2016 to 2019 *****\n")
 Get_Class_Transition_Matrix(districts)
 
 # Find the increase in the density of C1-C5 classes from 2016->2019
-print("***Computing Increase in Density of C1-C5 grids from 2016 to 2019\n")
+print("\n***** Computing Increase in Density of C1-C5 grids from 2016 to 2019 *****\n")
 result_dataframe = Get_Increased_Grid_Class_Density(districts)
 result_dataframe.to_csv(final_result_folder+"/Increase_In_Class_Density.csv",index=False)
-print("Check output directory for the results\n")
+
+print("\n#### Check ",final_result_folder," for the results!! ####\n")
+
+
 

@@ -318,18 +318,18 @@ def Plot_U_PU_R_map(district, U_PU_R_mapping, year, target_filepath):
             
     U_PU_R_image = Image.fromarray(U_PU_R_image)
     U_PU_R_image.save(target_filepath+'/'+district+'_U_PU_R_colored_prediction_'+year+'.png')
-    print("Done plotting ",district)
+    #print("Done plotting ",district)
 
 
 '''
 Driver code begins here
 '''
-print("***** Calculating Urban Indicators at both Pixel and Grid-level ******\n")
+#print("***** Calculating Urban Indicators at both Pixel and Grid-level ******\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 #districts = ['Chennai']
 
 for district in districts:
-    # print(district)
+    print("Working on ", district)
 
     CBU_CNBU_Chaning_map_filepath = 'CBU_CNBU_Changing_Maps/'+district+'_CBU_CNBU_Changing.png'
     CBU_CNBU_Changing_map = np.array( Image.open(CBU_CNBU_Chaning_map_filepath) )
@@ -347,13 +347,13 @@ for district in districts:
 
     # The years under analysis, first_year = 2016, last_year = 2019
     padded_BU_NBU_first_year, padded_BU_NBU_last_year = Get_BU_NBU_maps(padded_CBU_CNBU_Changing_map)
-    print("padded first year: ", np.unique(padded_BU_NBU_first_year, return_counts=True) )
-    print("padded last year: ", np.unique(padded_BU_NBU_last_year, return_counts=True) )
+    #print("padded first year: ", np.unique(padded_BU_NBU_first_year, return_counts=True) )
+    #print("padded last year: ", np.unique(padded_BU_NBU_last_year, return_counts=True) )
 
     # find the Urban/Periurban/Rural i.e U_PU_R pixel-level mapping
     U_PU_R_first_year, U_PU_R_last_year = Compute_urban_extent(padded_BU_NBU_first_year, padded_BU_NBU_last_year, rounded_min_lat, rounded_max_lat, rounded_min_lon, rounded_max_lon)
-    print('U_PU_R 2016: \t', np.unique(U_PU_R_first_year, return_counts=True) )
-    print('U_PU_R 2019: \t', np.unique(U_PU_R_last_year, return_counts=True) )
+    #print('U_PU_R 2016: \t', np.unique(U_PU_R_first_year, return_counts=True) )
+    #print('U_PU_R 2019: \t', np.unique(U_PU_R_last_year, return_counts=True) )
 
     save_image_directory = 'Visualization_Results/U_PU_R_maps/'+district
     os.makedirs(save_image_directory, exist_ok = True)
@@ -382,9 +382,9 @@ for district in districts:
     Results_dataframe_first.to_csv(results_directory+'/'+result_filename_first, index=False)
     Results_dataframe_last.to_csv(results_directory+'/'+result_filename_last, index=False)
 
-    print(district," Complete!")
+    print("Spatial indicators for ",district," successfully computed!!\n")
 
-print("Execution Complete!")
+print("\n#### Check Grid_wise_urban_indicators directory for the resultant files & Visualization_Results/U_PU_R_maps for pixel-wise visualizations of urban/perirban/rural maps ####\n")
 
 
 

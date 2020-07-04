@@ -82,13 +82,13 @@ def Save_grid_level_indicators(districts, class_information_dataframe, year):
         final_dataframe['Class_label'] = final_dataframe['Class_label'].fillna(0)
         final_dataframe.to_csv(final_directory+'/'+district+'/'+district+'_'+year+'_all_indicators.csv', index=False)
 
-    print("\n Grid-level indicators successfully written to file")
+    #print("\n Grid-level indicators successfully written to file")
 
 
 '''
 Driver code begins here for the year 2019
 '''
-print("\n *********** Categorizing Urbanized Grids ***********\n")
+#print("\n *********** Categorizing Urbanized Grids ***********\n")
 districts = ['Bangalore','Chennai','Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 year = '2019'
 
@@ -118,7 +118,7 @@ norm_feature_vectors[:, 0:2] = norm_feature_vectors[:, 0:2] + 1
 norm_feature_vectors[:, 0:2] = np.log2(norm_feature_vectors[:, 0:2])
 
 global_mean = norm_feature_vectors.mean(axis=0)
-print("The global mean in order #3way | #4way | WR | UF \n",global_mean)
+print("\nThe global mean in order #3way | #4way | WR | UF \n",global_mean,"\n")
 
 save_fig_directory = "Visualization_Results/Clustering_figures_2019"
 os.makedirs(save_fig_directory, exist_ok=True)
@@ -180,6 +180,7 @@ for cluster_id in range(len(final0_clusters_feature_vectors)):
 for cluster_id in range(len(final0_clusters_feature_vectors)):
     print("\n**********Major Cluster0- Subcluster: ",cluster_id,"***********")
     print(final0_clusters_feature_vectors[cluster_id].mean(axis=0))
+    print("\n")
 
 
 # Making 4 sub-clusers of Major cluster-1 
@@ -206,6 +207,7 @@ for cluster_id in range(len(final1_clusters_feature_vectors)):
 for cluster_id in range(len(final1_clusters_feature_vectors)):
     print("\n**********Major Cluster1- Subcluster: ",cluster_id,"***********")
     print(final1_clusters_feature_vectors[cluster_id].mean(axis=0))
+    print("\n")
     
 
 '''
@@ -293,7 +295,7 @@ for cluster_id in range(len(final1_clusters_grid_info)):
     final_dataframe = final_dataframe.append( curr_dataframe )
 
 Save_grid_level_indicators(districts, final_dataframe, year)
-print("\n Execution complete for year: ",year)
+print("\n**** Clustering complete for year: ",year," ****\n")
 
 
 '''
@@ -360,5 +362,8 @@ final_column_list = ['District_name','Grid_number','Class_label']
 final_dataframe = selected_grids_dataframe[final_column_list].copy()
     
 Save_grid_level_indicators(districts, final_dataframe, year)
-print("\n Execution complete for year: ",year)
+print("**** Clustering complete for year: ",year," ****\n")
+
+print("\n#### Check Grid_wise_all_indicators directory for the results!! ####\n")
+
 

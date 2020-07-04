@@ -1,85 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
-	<name>Banglore_CBU.kml</name>
-	<Style id="s_ylw-pushpin_hl2">
-		<IconStyle>
-			<scale>1.3</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<PolyStyle>
-			<fill>0</fill>
-		</PolyStyle>
-	</Style>
-	<StyleMap id="m_ylw-pushpin3">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin1</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#s_ylw-pushpin_hl3</styleUrl>
-		</Pair>
-	</StyleMap>
-	<Style id="s_ylw-pushpin_hl3">
-		<IconStyle>
-			<scale>1.3</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<PolyStyle>
-			<fill>0</fill>
-		</PolyStyle>
-	</Style>
-	<Style id="s_ylw-pushpin12">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<PolyStyle>
-			<fill>0</fill>
-		</PolyStyle>
-	</Style>
-	<Style id="s_ylw-pushpin1">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<PolyStyle>
-			<fill>0</fill>
-		</PolyStyle>
-	</Style>
-	<StyleMap id="m_ylw-pushpin4">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
-		</Pair>
-	</StyleMap>
-	<StyleMap id="m_ylw-pushpin">
-		<Pair>
-			<key>normal</key>
-			<styleUrl>#s_ylw-pushpin12</styleUrl>
-		</Pair>
-		<Pair>
-			<key>highlight</key>
-			<styleUrl>#s_ylw-pushpin_hl2</styleUrl>
-		</Pair>
-	</StyleMap>
+	<name>CBU_BANGLORE_NEW.kml</name>
 	<Style id="s_ylw-pushpin_hl">
 		<IconStyle>
 			<scale>1.3</scale>
@@ -88,9 +10,6 @@
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
-		<PolyStyle>
-			<fill>0</fill>
-		</PolyStyle>
 	</Style>
 	<Style id="s_ylw-pushpin">
 		<IconStyle>
@@ -100,21 +19,602 @@
 			</Icon>
 			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
 		</IconStyle>
-		<PolyStyle>
-			<fill>0</fill>
-		</PolyStyle>
 	</Style>
+	<Style id="s_ylw-pushpin_hl8">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl8</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Folder>
 		<name>CBU</name>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.60221390134372,12.91933383756233,0 77.61301896200614,12.9205020542688,0 77.61097648166835,12.92733570845236,0 77.60339987443625,12.92691309840632,0 77.60221390134372,12.91933383756233,0 
+							77.50894254744641,13.20200477910839,0 77.50902942661874,13.20228320077629,0 77.50876127931383,13.20235914545794,0 77.50868292373052,13.20207813843639,0 77.50894254744641,13.20200477910839,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.54353841470645,13.22107125590522,0 77.54366271160022,13.22107690236238,0 77.5436916104892,13.22146751393852,0 77.54355636116814,13.22146350800015,0 77.54353841470645,13.22107125590522,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.54337236977105,13.22114505218859,0 77.54338903540111,13.22147130702419,0 77.54331658042159,13.22147748095946,0 77.54330515746429,13.22114833894752,0 77.54337236977105,13.22114505218859,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.52817672475865,13.19696804697461,0 77.52841285550799,13.19696492982552,0 77.52843230297064,13.19723090597913,0 77.5281768150889,13.19724012250182,0 77.52817672475865,13.19696804697461,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.52786004259235,13.19701866798674,0 77.52808503137267,13.19700532976305,0 77.52809600683034,13.19721090957474,0 77.52785160144354,13.19722131459853,0 77.52786004259235,13.19701866798674,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.52970000284384,13.19631100031592,0 77.52994751510982,13.19628790687626,0 77.52997376235345,13.19649351292345,0 77.5296964663882,13.19649981547761,0 77.52970000284384,13.19631100031592,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.52894724384576,13.1970067282131,0 77.52911915276164,13.19698832372111,0 77.52915515474447,13.19720527966057,0 77.52895406881323,13.1972323903437,0 77.52894724384576,13.1970067282131,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.52926806621213,13.19701102630732,0 77.52946359328969,13.19700699730526,0 77.52945168078301,13.19721220960462,0 77.52925590506526,13.19722344092754,0 77.52926806621213,13.19701102630732,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.53888601429085,13.17452919052624,0 77.53950056873217,13.1744148904894,0 77.53963525086867,13.17524607629911,0 77.53905355184003,13.17534117305152,0 77.53888601429085,13.17452919052624,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.55174668565033,13.16913596668909,0 77.55177393442861,13.16943171552025,0 77.55160907412207,13.16945597840038,0 77.55158393372274,13.16916066836515,0 77.55174668565033,13.16913596668909,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.55764264369964,13.16434065085165,0 77.55764349026613,13.16512093868357,0 77.55741098177066,13.16513478698301,0 77.55739614942073,13.16435059923133,0 77.55764264369964,13.16434065085165,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.65518722585855,13.11736583380342,0 77.65578917502268,13.11736703213147,0 77.65580240528722,13.11761629568339,0 77.65514851153391,13.11760273232106,0 77.65518722585855,13.11736583380342,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.65388716988434,13.09607258735288,0 77.65389862436031,13.09623419912892,0 77.65343703897604,13.09627565550303,0 77.6534233832526,13.09611869441764,0 77.65388716988434,13.09607258735288,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.6538263254994,13.09548670790494,0 77.65384464653097,13.09566992497215,0 77.65337303506075,13.09569625808301,0 77.65336861515685,13.09551460777576,0 77.6538263254994,13.09548670790494,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.65902893962927,13.09117491483787,0 77.65911378474104,13.09156594503918,0 77.65888242363515,13.09160625146562,0 77.65882620052264,13.09121938307204,0 77.65902893962927,13.09117491483787,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.65939746364992,13.09104535355455,0 77.65946619289524,13.09144800281096,0 77.65927322723908,13.09148293132527,0 77.65919177482805,13.09108107369937,0 77.65939746364992,13.09104535355455,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.42531513003752,13.14666665076772,0 77.42544564424377,13.14695190460674,0 77.42427897916892,13.14744412296369,0 77.42412940499197,13.14715282488316,0 77.42531513003752,13.14666665076772,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.4221457883059,13.14372072477867,0 77.42268853459701,13.14458649250833,0 77.42246196486855,13.1447260205622,0 77.421936976921,13.14384520003204,0 77.4221457883059,13.14372072477867,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.48212899186282,13.20120178272437,0 77.48216529939434,13.20153390981743,0 77.48153915222595,13.20161555892646,0 77.48151843539915,13.20127834706626,0 77.48212899186282,13.20120178272437,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.49461573578348,13.19980295247695,0 77.49494161457376,13.19978800518306,0 77.49494096769303,13.19993338053396,0 77.49459946538057,13.19994526714203,0 77.49461573578348,13.19980295247695,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.49463600597295,13.19900198489286,0 77.49475057998197,13.19900208412511,0 77.49478033952255,13.19957317417317,0 77.49462680275599,13.19955702048334,0 77.49463600597295,13.19900198489286,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.55193745438963,12.97322938737449,0 77.55208936163216,12.97359118559122,0 77.55173523752144,12.97391169990195,0 77.55152285056171,12.97343714541502,0 77.55193745438963,12.97322938737449,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.55222371359423,12.97385574108278,0 77.5523192890623,12.9739753855914,0 77.55205795622712,12.97417805614138,0 77.55196121013992,12.97404218836697,0 77.55222371359423,12.97385574108278,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.5607657971054,12.97873625341868,0 77.5620279222483,12.97881934014726,0 77.56205913445193,12.97927446385862,0 77.56068955219996,12.97923918126784,0 77.5607657971054,12.97873625341868,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.56840593604093,12.97771543185961,0 77.56868141250065,12.97891126953772,0 77.56850563439095,12.97892091885943,0 77.56824048123198,12.97776131066422,0 77.56840593604093,12.97771543185961,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.57300320057716,12.97466937787843,0 77.57297838675895,12.97579559987209,0 77.57277164627476,12.97580731660662,0 77.57279436936409,12.97467715239014,0 77.57300320057716,12.97466937787843,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.58215539581734,12.96820391676204,0 77.5822991216298,12.96850666869302,0 77.58193854122031,12.96863817666895,0 77.58180076611433,12.96835424696081,0 77.58215539581734,12.96820391676204,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.57368010731767,12.94987268603999,0 77.57383193436146,12.94985896830574,0 77.57383217654885,12.95101854324984,0 77.57365786203985,12.9510098496764,0 77.57368010731767,12.94987268603999,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.59263108104656,12.95404869634096,0 77.59286718387865,12.95465908462198,0 77.59260322615739,12.95479325496321,0 77.59234198758844,12.95414665335393,0 77.59263108104656,12.95404869634096,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.5977491108857,12.9540990902723,0 77.59882758135845,12.95354559754592,0 77.5990986234505,12.95410435427929,0 77.59804617349269,12.95465331853761,0 77.5977491108857,12.9540990902723,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.60371844281937,12.95084316755537,0 77.60409057882271,12.95075784890076,0 77.60412624081934,12.95090625701705,0 77.60375293034254,12.95101876949673,0 77.60371844281937,12.95084316755537,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.60691461923247,12.95004768275191,0 77.60703460431817,12.95002055640366,0 77.60707216653266,12.95034324929299,0 77.60697180625436,12.95037044325314,0 77.60691461923247,12.95004768275191,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.60679716781792,12.95008265071767,0 77.60683381243923,12.95035066107018,0 77.60671207563375,12.95036804113624,0 77.60666269806423,12.95010036276502,0 77.60679716781792,12.95008265071767,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.60655218725589,12.95012055371863,0 77.60660509463717,12.95053336864524,0 77.60652970558753,12.95054897058775,0 77.60649252463128,12.95013570287793,0 77.60655218725589,12.95012055371863,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.64179800706152,12.8882900812086,0 77.64259739629412,12.88864144445162,0 77.64230261896201,12.88929847178383,0 77.64145727873691,12.88888914428065,0 77.64179800706152,12.8882900812086,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.64117996990882,12.88807025717448,0 77.64154395472602,12.88822886361446,0 77.64138136272895,12.88855260359086,0 77.64101027410571,12.88835742003434,0 77.64117996990882,12.88807025717448,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.64065757098443,12.88886724196855,0 77.6411059771759,12.88907265412866,0 77.64099350335628,12.88936214545052,0 77.64048289170243,12.88913079381626,0 77.64065757098443,12.88886724196855,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.64281633114066,12.88900563706805,0 77.64326849252861,12.8892031926653,0 77.64318814126861,12.88940866752149,0 77.64271894794571,12.88916081394098,0 77.64281633114066,12.88900563706805,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.64294610153927,12.88870870550352,0 77.64333890107227,12.88889325344203,0 77.64326671718371,12.88905514945162,0 77.64285299909821,12.88885223202783,0 77.64294610153927,12.88870870550352,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>CBU</name>
+			<styleUrl>#m_ylw-pushpin6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							77.64257403795051,12.88946862045987,0 77.64265635496957,12.88931389057186,0 77.64309656436438,12.88950704191591,0 77.64303475448808,12.88967908665258,0 77.64257403795051,12.88946862045987,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -128,7 +628,7 @@
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.55083697563155,12.96481454198526,0 77.56292473791069,12.96766420308856,0 77.56048651973042,12.97475742384627,0 77.54982830976499,12.9722118750723,0 77.55083697563155,12.96481454198526,0 
+							77.64643784676345,12.88200297563443,0 77.64673307934576,12.88246322810023,0 77.64655251838064,12.88265842131502,0 77.64627008932564,12.88218925592564,0 77.64643784676345,12.88200297563443,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -142,7 +642,7 @@
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.53019725387551,12.98122438867844,0 77.53210859602223,12.98966094197822,0 77.52319475431477,12.99231211592733,0 77.52116431895095,12.98408154936079,0 77.53019725387551,12.98122438867844,0 
+							77.64691736494329,12.88176798293119,0 77.64702971576556,12.88192809602888,0 77.64686928067701,12.88204509861876,0 77.6467440772761,12.88188918338372,0 77.64691736494329,12.88176798293119,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -150,13 +650,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.75207416343265,12.87584220581762,0 77.75475729417298,12.87673156158718,0 77.75515807566032,12.8787791271235,0 77.75229885786213,12.87891881564564,0 77.75207416343265,12.87584220581762,0 
+							77.65697644733604,12.87330497739055,0 77.65708535629268,12.87385562420509,0 77.65682061363427,12.87388218731404,0 77.65674581570497,12.87332505058926,0 77.65697644733604,12.87330497739055,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -164,13 +664,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.78795970990357,12.85724402144809,0 77.78888345263454,12.86109123832202,0 77.78491965155683,12.86070129669857,0 77.78453591867115,12.85690225105325,0 77.78795970990357,12.85724402144809,0 
+							77.65608952008759,12.87404067553705,0 77.6562756614705,12.87402720898666,0 77.65632613279747,12.87444183299552,0 77.65613447027077,12.87447437530698,0 77.65608952008759,12.87404067553705,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -178,13 +678,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.77392716997421,12.77531020995369,0 77.77683482696314,12.782286122646,0 77.77131473958026,12.78382862495651,0 77.76974166961881,12.77591180737186,0 77.77392716997421,12.77531020995369,0 
+							77.66414741270276,12.86964194129947,0 77.66428614471442,12.86999836395291,0 77.66299141556573,12.87036400005612,0 77.66289598656361,12.86998968128794,0 77.66414741270276,12.86964194129947,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -192,13 +692,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.69055016929973,12.70911526297041,0 77.70211037468496,12.70684955716675,0 77.70299483262505,12.71553204977917,0 77.69137591344192,12.71420361639246,0 77.69055016929973,12.70911526297041,0 
+							77.66390682940425,12.86872912062539,0 77.66401635119604,12.86916765027735,0 77.66272346016513,12.86952043797153,0 77.66261559089591,12.86910254688174,0 77.66390682940425,12.86872912062539,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -206,13 +706,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.63954672609179,12.76570048480887,0 77.64840810951326,12.77222333029985,0 77.63798671742718,12.78644135154661,0 77.63114531981678,12.77916518858626,0 77.63954672609179,12.76570048480887,0 
+							77.6609486748895,12.85860147167218,0 77.66110846514883,12.85905087511463,0 77.66092993998751,12.85910326628154,0 77.66078746988997,12.85865367610305,0 77.6609486748895,12.85860147167218,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -220,13 +720,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.44471673762897,12.87048761997851,0 77.4470310165074,12.87307468893667,0 77.44457458427001,12.87597046197187,0 77.44214444097005,12.87338838258377,0 77.44471673762897,12.87048761997851,0 
+							77.68509924953824,12.80316120732807,0 77.6850998985317,12.80386292188576,0 77.684919999966,12.80386285191454,0 77.68493528355286,12.80316325046625,0 77.68509924953824,12.80316120732807,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -234,13 +734,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.36048600578943,12.93416513019672,0 77.3614589454708,12.93431665031234,0 77.36099151245008,12.93523864576566,0 77.36049998055746,12.93511640405914,0 77.36048600578943,12.93416513019672,0 
+							77.70176904433593,12.77056980775635,0 77.7023146810246,12.77056323525691,0 77.70232920447762,12.77096691038328,0 77.70172734011976,12.77095926723267,0 77.70176904433593,12.77056980775635,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -248,13 +748,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.34083216755651,12.95115416411463,0 77.34133595761175,12.95080544248308,0 77.34138044990569,12.95173050694697,0 77.34059944905592,12.95171636548551,0 77.34083216755651,12.95115416411463,0 
+							77.70005414777567,12.77154794752324,0 77.70014404384985,12.77185839659073,0 77.69959156312068,12.77203961428425,0 77.6995227901642,12.77173818759596,0 77.70005414777567,12.77154794752324,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -262,13 +762,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.36147787198496,12.95954575104361,0 77.36270640190632,12.95962863834862,0 77.36279792244,12.96121685537085,0 77.36125534233481,12.96069690710229,0 77.36147787198496,12.95954575104361,0 
+							77.70029195692425,12.77087454458586,0 77.70032324432293,12.77109597463846,0 77.69961657940057,12.77122105788323,0 77.69960094249909,12.77101019879796,0 77.70029195692425,12.77087454458586,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -276,13 +776,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.38163564385984,13.01971568431749,0 77.38405584834153,13.01856944070711,0 77.38478323204103,13.02017506063959,0 77.38115176394057,13.02032423728897,0 77.38163564385984,13.01971568431749,0 
+							77.70012334397269,12.77017509294258,0 77.70021031402787,12.77057595890088,0 77.69978914495518,12.77066722605506,0 77.6997318697499,12.77025921683675,0 77.70012334397269,12.77017509294258,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -290,13 +790,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.42426040887047,13.04406006204137,0 77.42594050498165,13.04356849967037,0 77.42594878229032,13.04155835018136,0 77.42734757700886,13.04183517658473,0 77.42780342424263,13.04402011670024,0 77.42426700606518,13.0445938059166,0 77.42426040887047,13.04406006204137,0 
+							77.71114895229462,12.74962577411605,0 77.71160176181904,12.74961831956167,0 77.71162656771324,12.75031856647162,0 77.71114982677362,12.75032146032497,0 77.71114895229462,12.74962577411605,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -304,13 +804,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.42349644635799,13.08100437547804,0 77.4212279159288,13.07422838845295,0 77.42869167205927,13.0744378072651,0 77.43665960993008,13.07627365149325,0 77.42349644635799,13.08100437547804,0 
+							77.72980116078132,12.72546792188219,0 77.72988492465522,12.72637473050031,0 77.72967333714253,12.72641264123931,0 77.72961506635998,12.72548503340173,0 77.72980116078132,12.72546792188219,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -318,13 +818,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.43015276076051,13.12330821503893,0 77.43098305182761,13.1231990702011,0 77.43128429346061,13.12428204546283,0 77.43070786223895,13.12426720570705,0 77.43050053522302,13.12436998150982,0 77.43015276076051,13.12330821503893,0 
+							77.74620169750311,12.80590893925548,0 77.74636163400068,12.80636864785088,0 77.74562141141251,12.80657462962206,0 77.74554219461996,12.8060901053696,0 77.74620169750311,12.80590893925548,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -332,13 +832,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.41753863357806,13.14649610540365,0 77.41827727138542,13.14660065581695,0 77.41848686664238,13.14849382276627,0 77.41759328624319,13.14890744621252,0 77.41753863357806,13.14649610540365,0 
+							77.75676682249522,12.77881410155092,0 77.75718418647996,12.78152264663346,0 77.75633500713296,12.78159482527114,0 77.75596244164481,12.77886239307185,0 77.75676682249522,12.77881410155092,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -346,13 +846,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.42707695339072,13.14130049515709,0 77.4289306165317,13.14097998148774,0 77.42912903882403,13.14153623433379,0 77.4270741601004,13.14188037193352,0 77.42707695339072,13.14130049515709,0 
+							77.73743961934439,12.74450642762684,0 77.73774958359118,12.74585267187109,0 77.73638189161908,12.74620914912277,0 77.73607362486915,12.74483029398717,0 77.73743961934439,12.74450642762684,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -360,13 +860,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.60967129296603,13.16072225912591,0 77.61208858512724,13.16139477039469,0 77.61039546133844,13.16340484431749,0 77.60887109702406,13.16222503409246,0 77.60967129296603,13.16072225912591,0 
+							77.67370723197327,12.6549631129804,0 77.67381094811768,12.65568913346188,0 77.67316322703819,12.6558247350197,0 77.67304044201094,12.65512358945085,0 77.67370723197327,12.6549631129804,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -374,13 +874,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.61738687928927,13.18826970326629,0 77.61802639105058,13.18836377734733,0 77.61770260980585,13.18956042309892,0 77.6172059558485,13.18949109159542,0 77.61738687928927,13.18826970326629,0 
+							77.49422935881157,12.78202799872338,0 77.49439468969068,12.78258142792274,0 77.49408118359621,12.78267655137972,0 77.49394338512843,12.78213304118144,0 77.49422935881157,12.78202799872338,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -388,13 +888,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.6267450140713,13.19077003316446,0 77.62807375963769,13.1905705179956,0 77.62774328363747,13.19177579959043,0 77.62680065159527,13.19178857472347,0 77.6267450140713,13.19077003316446,0 
+							77.62855054282575,12.77860934130348,0 77.62845694517922,12.78038035384868,0 77.62773223116589,12.78035003026374,0 77.6278167156586,12.77862531310649,0 77.62855054282575,12.77860934130348,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>
@@ -402,251 +902,13 @@
 		</Placemark>
 		<Placemark>
 			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
 			<Polygon>
 				<tessellate>1</tessellate>
 				<outerBoundaryIs>
 					<LinearRing>
 						<coordinates>
-							77.38242483475115,12.98938129628923,0 77.38321913904772,12.98887899810595,0 77.38305336833407,12.98999117202223,0 77.38233145967645,12.98999897068799,0 77.38242483475115,12.98938129628923,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.64154976256857,13.1811866452053,0 77.6429590971149,13.18137030208118,0 77.64293322389901,13.18333847911665,0 77.64221562702627,13.18269626924539,0 77.64154976256857,13.1811866452053,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.65196323989956,13.16473866396494,0 77.6520930751926,13.16595830349232,0 77.65091592026648,13.16547275252367,0 77.65099226941116,13.16470447893487,0 77.65196323989956,13.16473866396494,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.63376628627231,13.17060524805827,0 77.63524930623676,13.17077388508077,0 77.63522481679367,13.17295016702284,0 77.6339427487805,13.17280013744416,0 77.63376628627231,13.17060524805827,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.48434952152222,13.19233701850967,0 77.48627320821706,13.19228397581286,0 77.48604601001165,13.19350409361516,0 77.48425672557443,13.19387873026584,0 77.48434952152222,13.19233701850967,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin3</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.325808445704,12.9576293950639,0 77.32614251784922,12.95755484834423,0 77.32627614288592,12.95848277633248,0 77.32555857348254,12.95843141432554,0 77.325808445704,12.9576293950639,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.54903972645504,12.9091856314554,0 77.56070949352389,12.92772205993164,0 77.55396583979565,12.9358890080969,0 77.5417521263067,12.9203683614049,0 77.54903972645504,12.9091856314554,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.69109865131615,13.17177238407856,0 77.69240623192857,13.17365516717464,0 77.69103853418721,13.17366526991311,0 77.68890009973717,13.17164856050124,0 77.69109865131615,13.17177238407856,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.7068953311484,13.17359262476514,0 77.70700932555449,13.17469267823578,0 77.70582070720035,13.1744253060422,0 77.70608865097994,13.17363162184351,0 77.7068953311484,13.17359262476514,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.71079458695398,13.17943384071196,0 77.71183313148492,13.1799949980393,0 77.71189924918031,13.18044284011246,0 77.71093598093252,13.1805752264471,0 77.71079458695398,13.17943384071196,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.71660355542738,13.15404536816492,0 77.71759347154894,13.15401391629949,0 77.71801008868464,13.15460723068584,0 77.71690472722638,13.15516597108011,0 77.71660355542738,13.15404536816492,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.60183618106304,13.02676593418881,0 77.60742789014989,13.02565571169302,0 77.60893446135805,13.03417922435657,0 77.60344881497906,13.03492481788937,0 77.60183618106304,13.02676593418881,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.70594955442182,13.00167074673256,0 77.71368730256461,13.00456823333784,0 77.7117721414465,13.00797073455684,0 77.70515639175477,13.00478959743059,0 77.70594955442182,13.00167074673256,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.68657049418813,12.80814431558475,0 77.69661344472455,12.81874949844875,0 77.67864729769832,12.82663389936672,0 77.67246804048862,12.8167705062407,0 77.68657049418813,12.80814431558475,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.59517198569306,13.09789977630677,0 77.59773810606166,13.1021885324442,0 77.59251384069512,13.10966379910957,0 77.59119525792097,13.10798848137513,0 77.59517198569306,13.09789977630677,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.50770476435433,12.79891622787259,0 77.50840160928091,12.80244755045235,0 77.50776450478494,12.80276442706962,0 77.50696144353985,12.79916978572433,0 77.50770476435433,12.79891622787259,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.53111834285204,12.77117439039102,0 77.53224480677069,12.77301717669576,0 77.53116491299068,12.77282981924005,0 77.52974292835951,12.77318751943379,0 77.52981505937444,12.7717863357566,0 77.53111834285204,12.77117439039102,0 
-						</coordinates>
-					</LinearRing>
-				</outerBoundaryIs>
-			</Polygon>
-		</Placemark>
-		<Placemark>
-			<name>CBU</name>
-			<styleUrl>#m_ylw-pushpin4</styleUrl>
-			<Polygon>
-				<tessellate>1</tessellate>
-				<outerBoundaryIs>
-					<LinearRing>
-						<coordinates>
-							77.50600465550761,12.77158157434122,0 77.50589188292527,12.77272117989106,0 77.50393670762602,12.77305764564572,0 77.50413054066003,12.77132058722545,0 77.50600465550761,12.77158157434122,0 
+							77.66927919226764,12.95475224228209,0 77.67018178381301,12.95469401044886,0 77.67021662973654,12.9553766583097,0 77.66924275159209,12.95540759243353,0 77.66927919226764,12.95475224228209,0 
 						</coordinates>
 					</LinearRing>
 				</outerBoundaryIs>

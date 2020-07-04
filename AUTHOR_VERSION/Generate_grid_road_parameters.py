@@ -419,7 +419,7 @@ def Get_walkability_ratio(curr_lat, curr_lon, grid_size, min_lat, max_lat, min_l
 '''
 Driver code starts here
 '''
-print("***** Calculating Grid-level Road-based Indicators ******\n")
+#print("***** Calculating Grid-level Road-based Indicators ******\n")
 districts = ['Chennai', 'Bangalore', 'Delhi','Gurgaon','Hyderabad','Kolkata','Mumbai']
 
 for district in districts:
@@ -475,7 +475,7 @@ for district in districts:
     Results_dataframe.to_csv(results_directory+'/'+result_filename, index=False)
     print("Road indicators calculated successfully for ",district)
 
-print("Execution Complete!\n")
+print("\n#### Check ",results_directory," for the results! ####\n")
 
 
 

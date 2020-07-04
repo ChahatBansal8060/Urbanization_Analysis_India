@@ -46,14 +46,18 @@ def image_statistics(input_folder):
 
 
 '''
-method to calculate cropping dimensions
+Method to print the details of groundtruth 
 '''
-def crop_dimensions(image_statistics_dict):
-    print('''--------- Original Groundtruth Statistics-----------''')
+def print_groundtruth_statistics(image_statistics_dict):
     print('Category -> ','total_pixels | ', 'total_images | ', 'x_mean | ', 'y_mean | ', 'x_median | ', 'y_median | ')
     for key,value in image_statistics_dict.items():
         print(key, '->', value)
- 
+
+
+'''
+method to calculate cropping dimensions
+'''
+def crop_dimensions(image_statistics_dict):
     temp = min(image_statistics_dict.values()) #min value of each parameter in CBU, CNBU, Changing 
     
     min_cat = [key for key in image_statistics_dict if image_statistics_dict[key] == temp] 	
@@ -111,21 +115,27 @@ def crop_images(input_folder, output_folder, crop_size):
 Driver code begins here
 '''
 def main():
-    print("***** Preprocessing the groundtruth to make it balanced *****\n")
     #districts for which groundtruth is present
-    districts = ['Bangalore', 'Chennai', 'Delhi', 'Mumbai']
+    districts = ['Bangalore', 'Chennai', 'Delhi', 'Gurgaon', 'Hyderabad', 'Mumbai']
     categories = ['CBU', 'CNBU', 'Changing']
 
     input_groundtruth_directory = 'Trimmed_tiffiles'
     output_groundtruth_directory = 'Balanced_Trimmed_tiffiles'
 
+    # Delete old results if any 
+    if os.path.exists('Balanced_Trimmed_tiffiles') and os.path.isdir('Balanced_Trimmed_tiffiles'):
+        shutil.rmtree('Balanced_Trimmed_tiffiles')
+
     for district in districts:
-        print("Analyzing ",district)
+        print("\nAnalyzing ",district,'\n')
         per_category_image_stats = {} #dictionary to store the statistics corresponding to each category of labels
         for category in categories:
             cropped_tiffiles_directory = input_groundtruth_directory+'/'+district+'/'+district+'_'+category
             per_category_image_stats[category] = image_statistics(cropped_tiffiles_directory)
         
+        print('''---------Original Groundtruth Statistics-----------''')    
+        print_groundtruth_statistics(per_category_image_stats)
+
         crop_size, min_category = crop_dimensions(per_category_image_stats)
         # print("Crop size is: ", crop_size)
         # print("Minimum category is: ", min_category)
@@ -144,6 +154,9 @@ def main():
             output_balanced_tiffiles_directory = output_groundtruth_directory+'/'+district+'/'+district+'_'+key
             crop_images(input_tiffiles_directory, output_balanced_tiffiles_directory, value)
     
+
+    print("\n#### Check ",output_groundtruth_directory," directory for Results ####\n")
+
 
 if __name__ == '__main__':
         main()	
