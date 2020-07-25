@@ -1,0 +1,177 @@
+
+************ Checking the Accuracy of CBU/CNBU/Changing Maps **************
+
+
+*************Overall Classification Report******************
+Label distribution of ground-truth:  (array([ 65, 130, 195]), array([1555, 2417, 1329]))
+              precision    recall  f1-score   support
+
+         CBU     0.9094    0.8842    0.8966      1555
+        CNBU     0.8575    0.9706    0.9105      2417
+    Changing     0.9221    0.7306    0.8153      1329
+
+    accuracy                         0.8851      5301
+   macro avg     0.8963    0.8618    0.8742      5301
+weighted avg     0.8889    0.8851    0.8826      5301
+
+
+Confusion matrix:
+Predicted   65    130  195
+Actual                    
+65         1375   131   49
+130          38  2346   33
+195          99   259  971
+
+ Accuracy:  88.51160158460668
+
+
+
+************** Bangalore  Classification Report******************
+              precision    recall  f1-score   support
+
+         CBU     0.9930    0.7978    0.8847       178
+        CNBU     0.5667    0.9947    0.7220       188
+    Changing     0.9355    0.4350    0.5939       200
+
+    accuracy                         0.7350       566
+   macro avg     0.8317    0.7425    0.7335       566
+weighted avg     0.8311    0.7350    0.7279       566
+
+
+
+
+Confusion matrix:
+Predicted  65   130  195
+Actual                  
+65         142   30    6
+130          1  187    0
+195          0  113   87
+
+ Accuracy:  73.4982332155477
+
+
+
+************** Chennai  Classification Report******************
+              precision    recall  f1-score   support
+
+         CBU     0.8803    0.9398    0.9091       133
+        CNBU     0.9405    0.9943    0.9667       175
+    Changing     0.9565    0.7928    0.8670       111
+
+    accuracy                         0.9236       419
+   macro avg     0.9258    0.9090    0.9143       419
+weighted avg     0.9256    0.9236    0.9220       419
+
+
+
+
+Confusion matrix:
+Predicted  65   130  195
+Actual                  
+65         125    5    3
+130          0  174    1
+195         17    6   88
+
+ Accuracy:  92.36276849642005
+
+
+
+************** Delhi  Classification Report******************
+              precision    recall  f1-score   support
+
+         CBU     0.8702    0.9347    0.9013       337
+        CNBU     0.8930    0.9755    0.9325       736
+    Changing     0.9520    0.7088    0.8126       364
+
+    accuracy                         0.8984      1437
+   macro avg     0.9051    0.8730    0.8821      1437
+weighted avg     0.9026    0.8984    0.8948      1437
+
+
+
+
+Confusion matrix:
+Predicted  65   130  195
+Actual                  
+65         315   17    5
+130         10  718    8
+195         37   69  258
+
+ Accuracy:  89.83994432846207
+
+
+
+************** Gurgaon  Classification Report******************
+              precision    recall  f1-score   support
+
+         CBU     0.9611    0.8258    0.8883       419
+        CNBU     0.8407    0.9861    0.9076       503
+    Changing     0.9430    0.8792    0.9100       414
+
+    accuracy                         0.9027      1336
+   macro avg     0.9149    0.8970    0.9020      1336
+weighted avg     0.9102    0.9027    0.9023      1336
+
+
+
+
+Confusion matrix:
+Predicted  65   130  195
+Actual                  
+65         346   54   19
+130          4  496    3
+195         10   40  364
+
+ Accuracy:  90.26946107784431
+
+
+
+************** Hyderabad  Classification Report******************
+              precision    recall  f1-score   support
+
+         CBU     0.9412    0.8696    0.9040       184
+        CNBU     0.9367    0.9811    0.9584       317
+    Changing     0.8416    0.8333    0.8374       102
+
+    accuracy                         0.9221       603
+   macro avg     0.9065    0.8947    0.8999       603
+weighted avg     0.9220    0.9221    0.9213       603
+
+
+
+
+Confusion matrix:
+Predicted  65   130  195
+Actual                  
+65         160   12   12
+130          2  311    4
+195          8    9   85
+
+ Accuracy:  92.2056384742952
+
+
+
+************** Mumbai  Classification Report******************
+              precision    recall  f1-score   support
+
+         CBU     0.8567    0.9441    0.8983       304
+        CNBU     0.9293    0.9237    0.9265       498
+    Changing     0.8091    0.6449    0.7177       138
+
+    accuracy                         0.8894       940
+   macro avg     0.8650    0.8376    0.8475       940
+weighted avg     0.8882    0.8894    0.8867       940
+
+
+
+
+Confusion matrix:
+Predicted  65   130  195
+Actual                  
+65         287   13    4
+130         21  460   17
+195         27   22   89
+
+ Accuracy:  88.93617021276596
+
+
