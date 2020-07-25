@@ -1,3 +1,8 @@
 COMPASS_FINAL_VERSION/Raw_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
 URBANIZATION_WITHOUT_CHANGE_CLASSIFIER/Raw_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
 AUTHOR_VERSION/Raw_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
+AUTHOR_VERSION_Difference_Based_Change_Detection/Processed_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
+AUTHOR_VERSION_Difference_Based_Change_Detection/Raw_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
+COMPASS_FINAL_VERSION/COMPASS_2020_Camera_Ready.zip filter=lfs diff=lfs merge=lfs -text
+COMPASS_FINAL_VERSION/COMPASS_2020_Supplementary_Document.zip filter=lfs diff=lfs merge=lfs -text
+COMPASS_FINAL_VERSION/Processed_OSM_data.zip filter=lfs diff=lfs merge=lfs -text
